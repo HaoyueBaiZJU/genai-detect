@@ -40,7 +40,7 @@ pip install git+https://github.com/cloneofsimo/lora.git
 
 ### Running the Evaluation
 
-To evaluate a on the dataset, run the following command:
+To evaluate a model on the dataset, run the following command:
 
 ```
 python eval_real_vs_fake.py \
