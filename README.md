@@ -20,7 +20,6 @@ To set up the required environment, install dependencies from `requirements.txt`
 
 ```bash
 pip install -r requirements.txt
-
 pip install git+https://github.com/cloneofsimo/lora.git
 ```
 
