@@ -1,9 +1,3 @@
-#export MODEL_NAME="runwayml/stable-diffusion-inpainting"
-#export MODEL_NAME="runwayml/stable-diffusion-v1-5-inpainting"
-#export MODEL_NAME="stabilityai/stable-diffusion-2-inpainting"
-#export MODEL_NAME="botp/stable-diffusion-v1-5-inpainting"
-#export MODEL_NAME="/home/dsi/hbai/code/runwayml_ckpt/models--runwayml--stable-diffusion-v1-5/snapshots/1d0c4ebf6ff58a5caecab40fa1406526bca4b5b9"
-#export MODEL_NAME="booksforcharlie/stable-diffusion-inpainting"
 export MODEL_NAME="/home/dsi/hbai/code/runwayml_ckpt/models--runwayml--stable-diffusion-inpainting/snapshots/51388a731f57604945fddd703ecb5c50e8e7b49d"
 
 export INSTANCE_DIR="/home/dsi/hbai/code/UniversalFakeDetect-main/data/diffusion_datasets/ldm_200_cfg/1_fake_thick_random_fine-tune"
