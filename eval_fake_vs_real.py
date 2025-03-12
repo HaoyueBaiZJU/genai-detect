@@ -59,32 +59,25 @@ def evaluate_single_image(
         )
         output_image = output.images[0]
 
-        # Convert to [C, H, W] in [0,1]
         output_tensor = pil_to_tensor(output_image).float().to(device) 
         output_tensors.append(output_tensor)
 
-    # Stack [N, C, H, W] (N=3 in your seeds) and average
     stacked_outputs = torch.stack(output_tensors, dim=0)
     mean_outputs = stacked_outputs.mean(dim=0)
 
     # Compute metrics
-    # 1. MS-SSIM
     ms_ssim_fn = MultiScaleStructuralSimilarityIndexMeasure(data_range=2.0).to(device)
 
     ms_ssim_val = ms_ssim_fn(
         mean_gt_sample.unsqueeze(0), mean_outputs.unsqueeze(0)
     )  
 
-    # 2. PSNR
     psnr_fn = PeakSignalNoiseRatio(data_range=1.0).to(device)
     psnr_val = psnr_fn(
         mean_gt_sample.unsqueeze(0), mean_outputs.unsqueeze(0)
     )  
 
-    # 3. L1
     l1_loss = nn.L1Loss()(mean_gt_sample, mean_outputs)
-
-    # 4. L2
     l2_loss = nn.MSELoss()(mean_gt_sample, mean_outputs)
 
     return {
@@ -112,8 +105,6 @@ def evaluate_folder(
     - For each image, runs evaluate_single_image
     - Aggregates MS-SSIM, PSNR, L1, and L2 over all images
     - Optionally saves results in .pt files if save_tensors_prefix is given
-    
-    Returns four numpy arrays: ssim_arr, psnr_arr, l1_arr, l2_arr.
     """
     ssim_list = []
     psnr_list = []
