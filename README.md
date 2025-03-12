@@ -8,6 +8,14 @@ The recent proliferation of photorealistic images created by generative models h
 
 ## Setups
 
+1. Clone this repository 
+```bash
+git clone https://github.com/HaoyueBaiZJU/genai-detect
+cd genai-detect
+```
+
+2. Install the necessary libraries
+
 To set up the required environment, install dependencies from `requirements.txt`:
 
 ```bash
@@ -19,7 +27,9 @@ pip install -r requirements.txt
 
 ### Data Preparation: 
 
-You need download the real, fake, and masks data via links, and organize as follows:
+- Dataset for the diffusion models (e.g., LDM/Glide) can be found [here](https://drive.google.com/file/d/1FXlGIRh_Ud3cScMgSVDbEWmPDmjcrm1t/view?usp=drive_link).
+
+- Download and unzip the file into the following directory.
 
 `./real_folder`
 
