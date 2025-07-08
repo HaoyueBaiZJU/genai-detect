@@ -38,6 +38,11 @@ pip install git+https://github.com/cloneofsimo/lora.git
 
 `./masks_folder`
 
+The dalle3-pop and corresponding genhalf masks can be downloaded via the link:
+```
+https://drive.google.com/file/d/1l3vMHdPgeKXK-MlB8e3Sd1MTtKaTt5GM
+```
+
 ### Running the Evaluation
 
 To evaluate a model on the dataset, run the following command:
@@ -65,3 +70,12 @@ To conduct fine-tuning via lora, run the following command:
 ## Citation
 
 If you use our codebase, please cite our work:
+```
+@inproceedings{bai2025s,
+  title={Where's the Liability in the Generative Era? Recovery-based Black-Box Detection of AI-Generated Content},
+  author={Bai, Haoyue and Sun, Yiyou and Cheng, Wei and Chen, Haifeng},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={28821--28830},
+  year={2025}
+}
+```
