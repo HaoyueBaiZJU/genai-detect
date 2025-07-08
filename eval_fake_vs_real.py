@@ -129,7 +129,7 @@ def evaluate_folder(
             prompt=prompt,
             mask_image=mask_image,
             seeds=seeds,
-            num_gen=num_gen
+            num_gen=num_gen,
             device=device,
             num_inference_steps=num_inference_steps,
             guidance_scale=guidance_scale
@@ -243,7 +243,7 @@ if __name__ == "__main__":
 
     parser.add_argument("--save_location", type=str, default=None, help="Folder to save metric tensors (e.g. 'ckpt/'). If None, does not save.")
     parser.add_argument("--prompt",ctype=str, default="photo of <s1><s2>", help="Prompt string for the inpainting or generation pipeline.")
-    parser.add_argument("--seeds", type=str, default="0", help="Random seeds.")
+    parser.add_argument("--seeds", type=int, default="0", help="Random seeds.")
     parser.add_argument("--num_gen", type=int, default=3, help="Number of generations.")
 
     parser.add_argument("--base_model", type=str, default="botp/stable-diffusion-v1-5-inpainting", help="Path to the base model checkpoint.")
