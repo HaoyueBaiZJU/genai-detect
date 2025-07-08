@@ -38,10 +38,18 @@ pip install git+https://github.com/cloneofsimo/lora.git
 
 `./masks_folder`
 
-The dalle3-pop and corresponding genhalf masks can be downloaded via the link:
+
+The different types of masks data can be downloaded vis the link:
+```
+https://drive.google.com/file/d/1xlnTxxO0CC1JD--MgLplaIYVOF_bQ_Am
+```
+
+The dalle3-pop and corresponding genhalf masks example can be downloaded via the link:
 ```
 https://drive.google.com/file/d/1l3vMHdPgeKXK-MlB8e3Sd1MTtKaTt5GM
 ```
+
+
 
 ### Running the Evaluation
 
